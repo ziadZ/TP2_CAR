@@ -1,4 +1,4 @@
-package services;
+package ressources;
 
 /**
  * 
@@ -14,10 +14,7 @@ public class User {
 	public String name;
 	// Password of the user
 	public String password;
-	// Read access of the user
-	public boolean can_read;
-	// Write access of the user
-	public boolean can_write;
+
 
 	/**
 	 * User constructor
@@ -31,13 +28,10 @@ public class User {
 	 * @param can_write
 	 *            : Writing access of the user
 	 */
-	public User(String name, String password, boolean can_read,
-			boolean can_write) {
+	public User(String name, String password) {
 		super();
 		this.name = name;
 		this.password = password;
-		this.can_read = can_read;
-		this.can_write = can_write;
 	}
 
 	public String getName() {
@@ -54,22 +48,6 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public boolean getReadAccess() {
-		return can_read;
-	}
-
-	public void setReadAccess(boolean can_read) {
-		this.can_read = can_read;
-	}
-
-	public boolean getWriteAccess() {
-		return can_write;
-	}
-
-	public void setWriteAccess(boolean can_write) {
-		this.can_write = can_write;
 	}
 
 	/**
